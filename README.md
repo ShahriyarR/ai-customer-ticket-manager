@@ -46,8 +46,6 @@ If you are on Windows and can't use `make`, you have two options:
 | make test            | python -m pytest -svvv -m "not slow and not integration" tests                    |
 | make format          | see [Makefile](./Makefile)                                                        |
 
-If you get stuck, ask for help in our [Discord](https://discord.gg/2R4BdaczUG)!
-
 
 ## 🛠️ Project Structure
 
