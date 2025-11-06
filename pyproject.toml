@@ -3,14 +3,21 @@ requires = ["flit_core==3.8.0"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "pytemplate"
+name = "pyticket"
 authors = [
     { name = "rzayev sehriyar", email = "rzayev.sehriyar@gmail.com" },
 ]
 dynamic = ["version"]
 description = "This is a Python Project Template"
 # Add here the production dependencies
-dependencies = []
+dependencies = [
+    "django ==5.2.8",
+    "django-ninja ==1.4.5",
+    "django-ninja-extra ==0.30.2",
+    "django-ai-assistant ==0.1.2",
+    "django-ninja-jwt ==5.4.0",
+    "python-dotenv ==1.2.1",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -31,7 +38,8 @@ test = [
     "pytest",
     "pytest-cov",
     "pytest-xdist",
-    "pytest-sugar"
+    "pytest-sugar",
+    "pytest-django",
 ]
 
 [tool.isort]

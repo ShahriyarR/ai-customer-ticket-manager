@@ -51,7 +51,7 @@ If you are on Windows and can't use `make`, you have two options:
 
 ```
 src/
-  pytemplate/
+  pyticket/
     ...              # Layers of the application (domain, service, etc.) 
 tests/               # Add your tests here
 Makefile             # Common commands (install, run, test, lint, etc.)
@@ -73,7 +73,7 @@ pyproject.toml       # Project configuration and dependencies
 
 ## 🧑‍💻 Development Flow
 
-1. Edit your code in `src/pytemplate/`.
+1. Edit your code in `src/pyticket/`.
 2. Add tests in `tests/`.
 3. Use `make format` and `make lint` to keep your code clean.
 4. Commit with confidence—pre-commit hooks will check your code!
