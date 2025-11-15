@@ -8,7 +8,12 @@ from ninja_jwt.authentication import JWTAuth
 
 from pyticket.domain.tickets.entities import TicketStatus
 from pyticket.entrypoints.web.api.dependencies import get_ticket_service
-from pyticket.entrypoints.web.api.tickets.schemas import TicketCreateSchema, TicketResponseSchema, TicketUpdateStatusSchema
+from pyticket.entrypoints.web.api.tickets.schemas import (
+    ClassificationResultSchema,
+    TicketCreateSchema,
+    TicketResponseSchema,
+    TicketUpdateStatusSchema,
+)
 from pyticket.service.tickets.dtos import CreateTicketDTO
 
 router = Router(tags=["tickets"])
@@ -72,7 +77,6 @@ def update_ticket_status(request, ticket_id: UUID, payload: TicketUpdateStatusSc
 
 def _to_response_schema(ticket_dto) -> dict:
     """Convert DTO to response schema."""
-    from pyticket.entrypoints.web.api.tickets.schemas import ClassificationResultSchema
 
     classification = None
     if ticket_dto.classification:
